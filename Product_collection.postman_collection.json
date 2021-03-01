@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "945e0c03-7296-40a0-964d-5254d784aaf6",
+		"name": "Product_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/product/48",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 48,\r\n    \"productName\": \"name48\",\r\n    \"description\": \"Product desc48\",\r\n    \"price\": 888.9,\r\n    \"createDate\": \"02.03.2025\",\r\n    \"updateDate\": \"02.03.2023\",\r\n    \"language\": {\r\n        \"id\": 1\r\n    },\r\n    \"currency\": {\r\n        \"id\": 5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_second_way",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 47,\r\n    \"productName\": \"name48Sc\",\r\n    \"description\": \"Product desc48\",\r\n    \"price\": 48.8,\r\n    \"createDate\": \"02.03.2025\",\r\n    \"updateDate\": \"02.03.2023\",\r\n    \"language\": {\r\n        \"id\": 1,\r\n        \"lang_name\": null,\r\n        \"lang_mark\": null\r\n    },\r\n    \"currency\": {\r\n        \"id\": 5,\r\n        \"country\": null,\r\n        \"currency\": null,\r\n        \"code\": null,\r\n        \"symbol\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/product/47",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\": \"name48\",\r\n    \"description\": \"Product desc48\",\r\n    \"price\": 48.8,\r\n    \"createDate\": \"02.03.2025\",\r\n    \"updateDate\": \"02.03.2023\",\r\n    \"language\": {\r\n        \"id\": 1\r\n    },\r\n    \"currency\": {\r\n        \"id\": 5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetbyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/product/42",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"42"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "language",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/product/language/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"language",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "currency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/product/currency/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"currency",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by name Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/product/client?pageNumber=0&pageSize=3&sortDirection=asc&sortBy=id&name=NaMe4&desc=Product desc&currency=2&lang=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"client"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						},
+						{
+							"key": "sortDirection",
+							"value": "asc"
+						},
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "name",
+							"value": "NaMe4"
+						},
+						{
+							"key": "desc",
+							"value": "Product desc"
+						},
+						{
+							"key": "currency",
+							"value": "2"
+						},
+						{
+							"key": "lang",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all?lang=1&currency=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/product/client/all?pageNumber=0&pageSize=7&sortDirection=asc&sortBy=id&currency=2&lang=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"client",
+						"all"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "7"
+						},
+						{
+							"key": "sortDirection",
+							"value": "asc"
+						},
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "currency",
+							"value": "2"
+						},
+						{
+							"key": "lang",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/client/2?lang=1&currency=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/product/client/27?lang=2&currency=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"client",
+						"27"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "2"
+						},
+						{
+							"key": "currency",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

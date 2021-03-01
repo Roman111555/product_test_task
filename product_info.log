@@ -1,0 +1,3 @@
+2021-03-01 17:38:10 WARN http-nio-8080-exec-1 com.example.test.product_info.controller.ProductControllerImpl - Product with productId = 42, currencyId = 2, languageId = 2 not found
+2021-03-01 19:08:28 WARN http-nio-8080-exec-8 com.example.test.product_info.controller.ProductControllerImpl - Product with productId = 42, currencyId = 2, languageId = 2 not found
+2021-03-01 19:15:37 WARN http-nio-8080-exec-3 com.example.test.product_info.service.ProductServiceImpl - No class com.example.test.product_info.domain.Product entity with id 48 exists!
