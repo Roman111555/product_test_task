@@ -20,36 +20,33 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product getProductById(Long id) {
-        Product product;
+        Product product = null;
         try {
             product = productRepository.findById(id).get();
         } catch (RuntimeException ex) {
             logger.warn(ex.getMessage());
-            return null;
         }
         return product;
     }
 
     @Override
     public List<Product> getAllProducts() {
-        List<Product> productList;
+        List<Product> productList = null;
         try {
             productList = productRepository.findAllByOrderByIdAsc();
         } catch (RuntimeException ex) {
             logger.warn(ex.getMessage());
-            return null;
         }
         return productList;
     }
 
     @Override
     public Product saveProduct(Product product) {
-        Product savedProduct;
+        Product savedProduct = null;
         try {
             savedProduct = productRepository.save(product);
         } catch (RuntimeException ex) {
             logger.warn(ex.getMessage());
-            return null;
         }
         return savedProduct;
     }

@@ -9,6 +9,8 @@ import com.example.test.product_info.service.ProductClientService;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +26,7 @@ public class ProductClientControllerImp implements ProductClientController {
     }
 
     @Override
-    public Page<Product> getProductsByNameAndDesc(
+    public ResponseEntity<Page<Product>> getProductsByNameAndDesc(
             ProductPage productPage,
             String name,
             String desc,
@@ -32,21 +34,25 @@ public class ProductClientControllerImp implements ProductClientController {
             Language languageId) {
 
         Page<Product> productList = productClientService.getAllProductsByNameOrDescription(name, desc, currencyId, languageId, productPage);
-        return productList;
+        if(productList.isEmpty())
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(productList, HttpStatus.OK) ;
     }
 
     @Override
-    public Page<Product> getProductsByCurrencyAndLanguage(
+    public ResponseEntity<Page<Product>> getProductsByCurrencyAndLanguage(
             ProductPage productPage,
             Currency currencyId,
             Language languageId) {
 
         Page<Product> productList = productClientService.getAllProductsByCurrencyAndLanguage(currencyId, languageId, productPage);
-        return productList;
+        if (productList.isEmpty())
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(productList, HttpStatus.OK);
     }
 
     @Override
-    public Product getProductsById(
+    public ResponseEntity<Product> getProductsById(
             Long productId,
             Currency currencyId,
             Language languageId) {
@@ -58,6 +64,6 @@ public class ProductClientControllerImp implements ProductClientController {
             logger.warn(errorMessage);
             throw new ProductNotFoundException(errorMessage);
         }
-        return product;
+        return new ResponseEntity<>(product, HttpStatus.OK);
     }
 }
